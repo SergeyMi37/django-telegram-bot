@@ -17,6 +17,19 @@ services:
   redis:
     image: redis:alpine
     container_name: dtb_redis
+  iris:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    command: --check-caps false --ISCAgent false
+    ports:
+      - 51443:1972
+      - 52443:52773
+      - 53773
+    volumes:
+    #  - ~/iris.key:/usr/irissys/mgr/iris.key
+       - ./:/irisdev/app
   web:
     build:
       context: .
