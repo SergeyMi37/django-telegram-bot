@@ -32,7 +32,7 @@ Application tools for technical support and DBMS administrator. View and edit ar
         <Resource Name="apptools.Uikit.PKG"/>
 	<Resource Name="appcachemsg.GBL"/>
         <CSPApplication 
-            SourcePath="/web"
+            SourcePath="/src/csp"
             DeployPath="${cspdir}/apptools"
             Url="/apptools" 
             ServeFiles="1"
